@@ -1,1 +1,794 @@
-[PASTE YOUR HTML CODE HERE]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎉 FREE MILLION DOLLARS 🎉</title>
+    <style>
+        /* ===== RESET & BODY ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0b0e1a, #1a1f2f);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* ===== MAIN CARD ===== */
+        .scam-card {
+            max-width: 700px;
+            width: 100%;
+            background: #fef9e8;
+            background-image: repeating-linear-gradient(45deg,
+                    #fff6d5 0px, #fff6d5 20px,
+                    #ffefc0 20px, #ffefc0 40px);
+            border: 12px solid #ffcc00;
+            border-radius: 60px 60px 40px 40px;
+            box-shadow: 0 0 0 8px #ff8800, 0 20px 60px rgba(255, 100, 0, 0.5);
+            padding: 40px 30px 50px;
+            text-align: center;
+            transform: rotate(-1deg);
+            transition: 0.3s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .scam-card:hover {
+            transform: rotate(0deg) scale(1.01);
+        }
+
+        /* ===== HEADLINE ===== */
+        h1 {
+            font-size: 3.2rem;
+            color: #cc0033;
+            text-shadow: 4px 4px 0 #ffcc00, 6px 6px 0 #ff8800, 0 0 40px #ff880066;
+            margin: 10px 0 5px;
+            letter-spacing: 2px;
+            word-break: break-word;
+            animation: wiggle 2s infinite;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-2deg); }
+            50% { transform: rotate(2deg); }
+        }
+
+        .subhead {
+            font-size: 1.5rem;
+            color: #444;
+            background: #ffeeaa;
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 40px;
+            border: 3px dashed #ff8800;
+            margin-bottom: 20px;
+            animation: shimmerText 1.5s infinite;
+        }
+
+        @keyframes shimmerText {
+            0%, 100% { color: #444; }
+            50% { color: #ff0040; }
+        }
+
+        /* ===== FAKE COUNTER ===== */
+        .counter-box {
+            background: #222;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            font-size: 2.4rem;
+            font-weight: bold;
+            padding: 12px 18px;
+            border-radius: 20px;
+            border: 4px solid #0f0;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.3), inset 0 0 30px rgba(0, 255, 0, 0.1);
+            margin: 20px 0;
+            display: inline-block;
+            animation: borderPulse 0.8s infinite alternate;
+        }
+
+        @keyframes borderPulse {
+            0% { border-color: #0f0; box-shadow: 0 0 30px rgba(0, 255, 0, 0.3); }
+            100% { border-color: #ff0; box-shadow: 0 0 60px rgba(255, 255, 0, 0.5); }
+        }
+
+        /* ===== FAKE PROGRESS ===== */
+        .progress-wrap {
+            background: #ccc;
+            border-radius: 40px;
+            height: 40px;
+            border: 4px solid #888;
+            overflow: hidden;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .progress-bar {
+            width: 87%;
+            height: 100%;
+            background: linear-gradient(90deg, #ffcc00, #ff8800, #ff0040);
+            background-size: 200% 100%;
+            animation: shimmer 0.8s infinite linear;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 2px 2px 0 #00000066;
+            position: relative;
+        }
+
+        .progress-bar::after {
+            content: '⚡⚡⚡';
+            position: absolute;
+            right: 10px;
+            animation: spark 0.3s infinite alternate;
+        }
+
+        @keyframes spark {
+            0% { opacity: 0.3; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+        /* ===== CLAIM BUTTON ===== */
+        .claim-btn {
+            background: radial-gradient(circle at 30% 30%, #ffdd00, #ff8800);
+            border: none;
+            border-bottom: 10px solid #aa5500;
+            color: white;
+            font-size: 2.8rem;
+            font-weight: bold;
+            padding: 20px 40px;
+            border-radius: 120px;
+            cursor: pointer;
+            text-shadow: 3px 3px 0 #aa5500;
+            box-shadow: 0 10px 40px rgba(255, 100, 0, 0.5);
+            transition: 0.08s linear;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto 10px;
+            letter-spacing: 3px;
+            animation: btnPulse 1s infinite alternate;
+        }
+
+        @keyframes btnPulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.03); }
+        }
+
+        .claim-btn:active {
+            transform: translateY(8px) scale(0.97);
+            border-bottom-width: 3px;
+        }
+
+        .claim-btn:disabled {
+            opacity: 0.6;
+            transform: translateY(5px);
+            border-bottom-width: 4px;
+            cursor: not-allowed;
+            animation: none;
+        }
+
+        /* ===== REVEAL MESSAGE ===== */
+        .reveal {
+            background: #fff0d0;
+            border: 6px solid #ff8800;
+            border-radius: 40px;
+            padding: 25px 20px;
+            margin: 25px 0 10px;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #cc0044;
+            display: none;
+            box-shadow: inset 0 0 0 4px #ffcc00, 0 0 60px rgba(255, 100, 0, 0.3);
+            animation: revealPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes revealPop {
+            0% { transform: scale(0.5) rotate(-10deg); opacity: 0; }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .reveal .big-emoji {
+            font-size: 5rem;
+            display: block;
+            animation: potatoDance 0.6s infinite alternate;
+        }
+
+        @keyframes potatoDance {
+            0% { transform: rotate(-10deg) scale(1); }
+            100% { transform: rotate(10deg) scale(1.2); }
+        }
+
+        /* ============================================================ */
+        /* ===== FAKE ADS ===== */
+        /* ============================================================ */
+        .ads-section {
+            max-width: 700px;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .ad-box {
+            background: #fffbe6;
+            border: 6px solid #ff66aa;
+            border-radius: 30px;
+            padding: 18px 22px;
+            box-shadow: 0 8px 0 #aa3366, 0 12px 30px rgba(255, 0, 100, 0.25);
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            transition: 0.2s;
+            cursor: default;
+            position: relative;
+        }
+
+        .ad-box:hover {
+            transform: scale(1.02) rotate(-1deg);
+            border-color: #ff00aa;
+        }
+
+        .ad-badge {
+            background: #ff0066;
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            padding: 2px 14px;
+            border-radius: 40px;
+            letter-spacing: 2px;
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            box-shadow: 0 2px 0 #990044;
+            animation: badgeBlink 0.8s infinite alternate;
+        }
+
+        @keyframes badgeBlink {
+            0% { background: #ff0066; }
+            100% { background: #ff4400; }
+        }
+
+        .ad-icon {
+            font-size: 3.2rem;
+            line-height: 1;
+            flex-shrink: 0;
+            animation: iconFloat 2s infinite ease-in-out;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .ad-content {
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .ad-content h3 {
+            font-size: 1.2rem;
+            color: #cc0044;
+            margin-bottom: 2px;
+        }
+
+        .ad-content p {
+            font-size: 0.95rem;
+            color: #444;
+            margin: 2px 0;
+        }
+
+        .ad-content .ad-cta {
+            display: inline-block;
+            background: #00bb66;
+            color: white;
+            font-weight: bold;
+            padding: 4px 18px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            margin-top: 4px;
+            border-bottom: 4px solid #008844;
+            cursor: pointer;
+            transition: 0.06s linear;
+            user-select: none;
+        }
+
+        .ad-content .ad-cta:active {
+            transform: translateY(4px);
+            border-bottom-width: 1px;
+        }
+
+        .ad-reaction {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #ff0066;
+            display: none;
+            margin-top: 4px;
+            animation: reactionPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes reactionPop {
+            0% { transform: scale(0.3); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .ad-reaction.show {
+            display: block;
+        }
+
+        /* ============================================================ */
+        /* ===== FAKE POPUPS ===== */
+        /* ============================================================ */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s;
+            backdrop-filter: blur(6px);
+        }
+
+        .popup-overlay.show {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .popup-box {
+            background: #ffeedd;
+            border: 12px solid #ff0040;
+            border-radius: 50px;
+            padding: 40px 35px;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 0 0 8px #ff8800, 0 30px 80px rgba(0,0,0,0.8);
+            animation: popupBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+        }
+
+        @keyframes popupBounce {
+            0% { transform: scale(0.3) rotate(-20deg); }
+            100% { transform: scale(1) rotate(0deg); }
+        }
+
+        .popup-box .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 18px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #ff0040;
+            font-weight: bold;
+            transition: 0.2s;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+
+        .popup-box .popup-close:hover {
+            transform: rotate(90deg) scale(1.3);
+        }
+
+        .popup-box h2 {
+            font-size: 2.2rem;
+            color: #cc0033;
+            margin-bottom: 10px;
+        }
+
+        .popup-box .popup-icon {
+            font-size: 4rem;
+            display: block;
+            margin: 10px auto;
+            animation: iconFloat 1s infinite ease-in-out;
+        }
+
+        .popup-box p {
+            font-size: 1.2rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .popup-box .popup-btn {
+            background: #ff0040;
+            color: white;
+            border: none;
+            border-bottom: 6px solid #aa002a;
+            padding: 14px 40px;
+            border-radius: 60px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.06s linear;
+            font-family: inherit;
+        }
+
+        .popup-box .popup-btn:active {
+            transform: translateY(5px);
+            border-bottom-width: 2px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 550px) {
+            h1 { font-size: 2.2rem; }
+            .claim-btn { font-size: 1.8rem; padding: 16px 20px; }
+            .reveal { font-size: 1.6rem; }
+            .ad-box { flex-direction: column; text-align: center; }
+            .ad-icon { font-size: 2.6rem; }
+            .popup-box { padding: 30px 20px; }
+            .popup-box h2 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- ===== POPUP 1 ===== -->
+    <!-- ============================================================ -->
+    <div class="popup-overlay" id="popup1">
+        <div class="popup-box">
+            <button class="popup-close" onclick="closePopup('popup1')">✕</button>
+            <span class="popup-icon">🖥️</span>
+            <h2>⚠️ VIRUS DETECTED! ⚠️</h2>
+            <p>Your computer has <strong>37,492 viruses</strong>!</p>
+            <p style="font-size:0.9rem; color:#888;">*Just kidding. But we got your attention, didn't we?</p>
+            <button class="popup-btn" onclick="closePopup('popup1')">💀 FIX IT</button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ===== POPUP 2 ===== -->
+    <!-- ============================================================ -->
+    <div class="popup-overlay" id="popup2">
+        <div class="popup-box">
+            <button class="popup-close" onclick="closePopup('popup2')">✕</button>
+            <span class="popup-icon">🎰</span>
+            <h2>🎉 YOU'RE A WINNER! 🎉</h2>
+            <p>You've been selected for a <strong>FREE VACATION</strong>!</p>
+            <p style="font-size:0.9rem; color:#888;">*Destination: your backyard. BYO tent.</p>
+            <button class="popup-btn" onclick="closePopup('popup2')">🧳 PACK BAGS</button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ===== POPUP 3 ===== -->
+    <!-- ============================================================ -->
+    <div class="popup-overlay" id="popup3">
+        <div class="popup-box">
+            <button class="popup-close" onclick="closePopup('popup3')">✕</button>
+            <span class="popup-icon">📞</span>
+            <h2>📞 YOUR CALL IS IMPORTANT</h2>
+            <p>Please hold for the next available scammer.</p>
+            <p style="font-size:0.9rem; color:#888;">*Estimated wait time: ∞</p>
+            <button class="popup-btn" onclick="closePopup('popup3')">🔊 HOLD FOREVER</button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ===== MAIN SCAM CARD ===== -->
+    <!-- ============================================================ -->
+    <div class="scam-card">
+
+        <h1>🎉 YOU WON! 🎉</h1>
+        <div class="subhead">💵 $1,000,000 USD 💵</div>
+
+        <div class="counter-box" id="counterDisplay">
+            ⏳ 47 : 12
+        </div>
+        <p style="font-size:1rem; color:#555; margin-top:-5px;">
+            ⚡ <strong>Hurry!</strong> Only <span id="fakeLeft">3</span> prizes left!
+            <span id="fakeUrgency" style="display:inline-block; animation: blink 0.3s infinite;">🔴</span>
+        </p>
+        <style>
+            @keyframes blink {
+                0% { opacity: 1; transform: scale(1); }
+                100% { opacity: 0.3; transform: scale(1.05); }
+            }
+        </style>
+
+        <div class="progress-wrap">
+            <div class="progress-bar" id="progressBar">
+                🔥 87% CLAIMED
+            </div>
+        </div>
+
+        <button class="claim-btn" id="claimBtn">
+            🚀 CLAIM NOW!
+        </button>
+
+        <div class="reveal" id="revealBox">
+            <span class="big-emoji">🥔</span>
+            <p>🎊 <strong>JUST KIDDING!</strong> 🎊</p>
+            <p style="font-size:1.6rem;">Here's your potato.</p>
+            <p style="font-size:1rem; color:#886633;">
+                (No data was collected. This is 100% a joke.)
+            </p>
+            <button onclick="location.reload()" style="margin-top:15px; padding:10px 30px; border-radius:40px; border:3px solid #ff8800; background:#ffcc00; font-size:1.2rem; font-weight:bold; cursor:pointer; font-family:inherit;">
+                🔄 TRY AGAIN (LOL)
+            </button>
+        </div>
+
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ===== FAKE ADS ===== -->
+    <!-- ============================================================ -->
+    <div class="ads-section">
+
+        <div class="ad-box">
+            <span class="ad-badge">📢 AD</span>
+            <div class="ad-icon">🐉</div>
+            <div class="ad-content">
+                <h3>🔥 Dragon Energy Water™</h3>
+                <p>Drink this and you'll <em>literally</em> breathe fire.</p>
+                <p style="font-size:0.8rem; color:#888;">*Results may include mild combustion.</p>
+                <span class="ad-cta" data-reaction="🐉💨">🔥 Try Now</span>
+                <div class="ad-reaction">🐉💨 WHOA! You're on fire! (not really)</div>
+            </div>
+        </div>
+
+        <div class="ad-box">
+            <span class="ad-badge">📢 AD</span>
+            <div class="ad-icon">🧦</div>
+            <div class="ad-content">
+                <h3>🧦 Invisible Socks</h3>
+                <p>They're so invisible, you'll forget you're wearing them!</p>
+                <p style="font-size:0.8rem; color:#888;">*Just like your current socks, but more expensive.</p>
+                <span class="ad-cta" data-reaction="👻🧦">👻 Buy Now</span>
+                <div class="ad-reaction">👻🧦 You bought nothing! It's invisible!</div>
+            </div>
+        </div>
+
+        <div class="ad-box">
+            <span class="ad-badge">📢 AD</span>
+            <div class="ad-icon">😺</div>
+            <div class="ad-content">
+                <h3>😺 Cat Translator Pro</h3>
+                <p>Finally understand what your cat is <em>really</em> saying.</p>
+                <p style="font-size:0.8rem; color:#888;">*Spoiler: it's always "feed me".</p>
+                <span class="ad-cta" data-reaction="😹🗣️">🐾 Translate</span>
+                <div class="ad-reaction">😹🗣️ Your cat said: "You're a good human, now give me tuna."</div>
+            </div>
+        </div>
+
+        <div class="ad-box">
+            <span class="ad-badge">📢 AD</span>
+            <div class="ad-icon">🌍</div>
+            <div class="ad-content">
+                <h3>🌍 Flat Earth GPS</h3>
+                <p>Navigation for people who know the truth.</p>
+                <p style="font-size:0.8rem; color:#888;">*Only works if you believe hard enough.</p>
+                <span class="ad-cta" data-reaction="🧭❌">🧭 Navigate</span>
+                <div class="ad-reaction">🧭❌ You're now in the Bermuda Triangle. Oops.</div>
+            </div>
+        </div>
+
+        <div class="ad-box">
+            <span class="ad-badge">📢 AD</span>
+            <div class="ad-icon">💪</div>
+            <div class="ad-content">
+                <h3>💪 AirPump Biceps</h3>
+                <p>Inflatable muscles — look swole in seconds!</p>
+                <p style="font-size:0.8rem; color:#888;">*May deflate unexpectedly during dates.</p>
+                <span class="ad-cta" data-reaction="💪🎈">💨 Pump Up</span>
+                <div class="ad-reaction">💪🎈 *pshhhh* You're now 90% hot air. Congrats!</div>
+            </div>
+        </div>
+
+        <div class="ad-box">
+            <span class="ad-badge">📢 AD</span>
+            <div class="ad-icon">🧠</div>
+            <div class="ad-content">
+                <h3>🧠 Brain Polish</h3>
+                <p>Makes your brain shiny and smooth. 100% lead-free!</p>
+                <p style="font-size:0.8rem; color:#888;">*May cause sudden knowledge of bad puns.</p>
+                <span class="ad-cta" data-reaction="🧠✨">✨ Polish</span>
+                <div class="ad-reaction">🧠✨ Your brain is now sparkling! You now know 47 new puns.</div>
+            </div>
+        </div>
+
+        <div class="ad-box">
+            <span class="ad-badge">📢 AD</span>
+            <div class="ad-icon">🦄</div>
+            <div class="ad-content">
+                <h3>🦄 Unicorn Repellent</h3>
+                <p>Keeps those pesky unicorns away from your garden.</p>
+                <p style="font-size:0.8rem; color:#888;">*Not tested on actual unicorns. They're elusive.</p>
+                <span class="ad-cta" data-reaction="🦄🚫">🧴 Spray</span>
+                <div class="ad-reaction">🦄🚫 Unicorn successfully repelled! (probably)</div>
+            </div>
+        </div>
+
+        <div class="ad-box">
+            <span class="ad-badge">📢 AD</span>
+            <div class="ad-icon">🍕</div>
+            <div class="ad-content">
+                <h3>🍕 Pizza-Scented Perfume</h3>
+                <p>Smell delicious everywhere you go. Dogs will love you.</p>
+                <p style="font-size:0.8rem; color:#888;">*May attract seagulls.</p>
+                <span class="ad-cta" data-reaction="🍕👃">👃 Sniff</span>
+                <div class="ad-reaction">🍕👃 You now smell like pepperoni. A seagull is following you.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ===== SCRIPT ===== -->
+    <!-- ============================================================ -->
+    <script>
+        (function() {
+            // ============================================================
+            // ===== POPUP CONTROLLER =====
+            // ============================================================
+            window.closePopup = function(id) {
+                const popup = document.getElementById(id);
+                popup.classList.remove('show');
+                // Spawn another popup after random delay (annoying)
+                if (Math.random() > 0.3) {
+                    const popups = ['popup1', 'popup2', 'popup3'];
+                    const next = popups[Math.floor(Math.random() * popups.length)];
+                    setTimeout(() => {
+                        document.getElementById(next).classList.add('show');
+                    }, 3000 + Math.random() * 5000);
+                }
+            };
+
+            // Show first popup after 5 seconds
+            setTimeout(() => {
+                document.getElementById('popup1').classList.add('show');
+            }, 5000);
+
+            // Show random popups periodically
+            setInterval(() => {
+                if (Math.random() > 0.4) {
+                    const popups = ['popup1', 'popup2', 'popup3'];
+                    const pick = popups[Math.floor(Math.random() * popups.length)];
+                    document.getElementById(pick).classList.add('show');
+                }
+            }, 12000);
+
+            // ============================================================
+            // ===== MAIN SCAM ELEMENTS =====
+            // ============================================================
+            const claimBtn = document.getElementById('claimBtn');
+            const revealBox = document.getElementById('revealBox');
+            const counterDisplay = document.getElementById('counterDisplay');
+            const fakeLeft = document.getElementById('fakeLeft');
+            const progressBar = document.getElementById('progressBar');
+            const fakeUrgency = document.getElementById('fakeUrgency');
+
+            // ===== FAKE COUNTDOWN =====
+            let minutes = 47;
+            let seconds = 12;
+
+            function updateCounter() {
+                const m = String(minutes).padStart(2, '0');
+                const s = String(seconds).padStart(2, '0');
+                counterDisplay.textContent = `⏳ ${m} : ${s}`;
+
+                if (minutes === 0 && seconds === 0) {
+                    minutes = 47;
+                    seconds = 12;
+                } else if (seconds === 0) {
+                    minutes--;
+                    seconds = 59;
+                } else {
+                    seconds--;
+                }
+            }
+            setInterval(updateCounter, 1000);
+
+            // ===== FAKE PRIZES LEFT =====
+            function randomizePrizesLeft() {
+                const vals = ['3', '2', '1', '0', '3', '2', '1', '4', '2', '0', '1'];
+                fakeLeft.textContent = vals[Math.floor(Math.random() * vals.length)];
+                fakeUrgency.style.color = Math.random() > 0.5 ? '#ff0000' : '#ff8800';
+            }
+            setInterval(randomizePrizesLeft, 2500);
+
+            // ===== PROGRESS BAR =====
+            let progress = 87;
+            setInterval(() => {
+                progress += (Math.random() > 0.5 ? 1 : -1) * (Math.random() * 3);
+                progress = Math.min(99, Math.max(75, progress));
+                progressBar.style.width = progress + '%';
+                progressBar.textContent = `🔥 ${Math.round(progress)}% CLAIMED`;
+            }, 2000);
+
+            // ===== CLAIM BUTTON =====
+            claimBtn.addEventListener('click', function() {
+                claimBtn.disabled = true;
+                claimBtn.textContent = '🎁 CLAIMED!';
+                revealBox.style.display = 'block';
+
+                const emoji = revealBox.querySelector('.big-emoji');
+                if (emoji) {
+                    const items = ['🥔', '🍠', '🥔', '🧅', '🥕', '🍄', '🌽'];
+                    let i = 0;
+                    const interval = setInterval(() => {
+                        emoji.textContent = items[i % items.length];
+                        i++;
+                        if (i > 15) {
+                            clearInterval(interval);
+                            emoji.textContent = '🥔';
+                        }
+                    }, 150);
+                }
+                revealBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+
+            // ============================================================
+            // ===== FAKE ADS INTERACTIONS =====
+            // ============================================================
+            const adCtas = document.querySelectorAll('.ad-cta');
+
+            adCtas.forEach((cta) => {
+                cta.addEventListener('click', function(e) {
+                    e.stopPropagation();
+
+                    const adBox = this.closest('.ad-box');
+                    const reaction = adBox.querySelector('.ad-reaction');
+
+                    if (reaction) {
+                        const reactionText = this.getAttribute('data-reaction') || '😂';
+                        reaction.textContent = reactionText + ' (nice try!)';
+                        reaction.classList.add('show');
+
+                        clearTimeout(reaction._timer);
+                        reaction._timer = setTimeout(() => {
+                            reaction.classList.remove('show');
+                        }, 4000);
+                    }
+
+                    const originalText = this.textContent;
+                    this.textContent = '🤡 CLICKED!';
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                    }, 1200);
+
+                    adBox.style.transform = 'rotate(3deg) scale(1.05)';
+                    adBox.style.borderColor = '#ff00aa';
+                    setTimeout(() => {
+                        adBox.style.transform = '';
+                        adBox.style.borderColor = '';
+                    }, 250);
+                });
+            });
+
+            console.log('🚨 JOKE SITE LOADED — no data, no scams, just potatoes!');
+        })();
+    </script>
+
+</body>
+</html>
